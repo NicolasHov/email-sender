@@ -7,14 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-@u = User.create(email:"kola@yopmail.com", name:"Jokoss le boloss")
-@u1 = User.create(email:"koli@yopmail.com", name:"Jakass la balass")
-@u2 = User.create(email:"kolu@yopmail.com", name:"Jakiss la baliss")
-@u3 = User.create(email:"kolo@yopmail.com", name:"Jakoss la baloss")
-@u4 = User.create(email:"kolux@yopmail.com", name:"Jakux la balux")
+@u = User.create(email:"kola@yopmail.com")
+@u1 = User.create(email:"koli@yopmail.com")
+@u2 = User.create(email:"kolu@yopmail.com")
+@u3 = User.create(email:"kolo@yopmail.com")
+@u4 = User.create(email:"kolux@yopmail.com")
 
-@users = []
-User.all.each do |user|
-	@users << user
-end
+# @users = []
+# User.all.each do |user|
+# 	@users << user
+# end
 
