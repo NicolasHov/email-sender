@@ -1,7 +1,8 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Tu as toujours révé d'envoyer un mail ??</h1>
 
-<input type="button" value="Envoyer un mail à <%= @user.email %>">
+<% @u = User.first %>
+
+<input type="button" value="Envoyer un mail à <%= @u.email %>">
 
 
 <%= javascript_tag do %> 
@@ -9,8 +10,9 @@
 $(document).ready(function(){
     
         $( "input" ).click(function( event ) {
+            
+            <% UserMailer.welcome_email(@u).deliver %>
             alert("Mail envoyé !"); 
-            <% UserMailer.welcome_email(user).deliver %>
         });
     });
 
